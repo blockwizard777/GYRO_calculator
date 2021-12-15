@@ -1,0 +1,16 @@
+.inputStake{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+.inputStakeTitle{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    display: flex;
+    align-items: flex-end;
+    color: #9A9A9D;
+}
