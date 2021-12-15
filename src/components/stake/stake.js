@@ -28,6 +28,7 @@ const Section = styled(Grid)`
 const StackSection = styled(Stack)`
   background: ${({ theme }) => theme.section};
   border-radius: 6px;
+  box-shadow: 0px 20px 40px rgba(57, 57, 57, 0.03);
 `
 const TabSection = styled(Stack)`
   background: ${({ theme }) => theme.tabSection};
@@ -113,7 +114,7 @@ const ApproveButton = styled(Button)`
   margin-top: 28px!important;
 `
 
-export default function DividerStack() {
+export default function Stake() {
   return (
     <>
       <Stack

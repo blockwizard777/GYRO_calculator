@@ -18,6 +18,7 @@ const FooterButton = styled(Button)`
   padding: 0px;
   min-width: 46px;
   height: 46px;
+  box-shadow: 0px 20px 40px rgb(57 57 57 / 10%);
 `;
 
 const ConnectWallet = styled(Button)`
@@ -31,6 +32,7 @@ const ConnectWallet = styled(Button)`
     height: 46px;
     padding: 0 20px;
     text-transform: none;
+    box-shadow: 0px 20px 40px rgb(57 57 57 / 10%);
 `;
 
 const Footer = ({ theme, toggleTheme }) => {
@@ -40,7 +42,8 @@ const Footer = ({ theme, toggleTheme }) => {
                 direction='row'
                 justifyContent="space-between"
                 alignItems="flex-end"
-                mt={3}
+                mt={5}
+                pb={3}
             >
                 <ConnectWallet>
                     Connect to a wallet

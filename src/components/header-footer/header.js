@@ -36,6 +36,7 @@ const HeaderActiveButton = styled(Button)`
 const LogButton = styled(Button)`
     padding: 0px;
     min-width: 24px;
+    box-shadow: 0px 20px 40px rgba(57, 57, 57, 0.03);
 `;
 
 const MenuStack = styled(Stack)`
@@ -43,6 +44,7 @@ const MenuStack = styled(Stack)`
     color:${({ theme }) => theme.text};   
     padding : 4px;
     border-radius: 4px;
+    box-shadow: 0px 20px 40px rgba(57, 57, 57, 0.03);
 `;
 
 const Header = ({ theme }) => {

@@ -23,6 +23,7 @@ const ToggleContainer = styled(Button)`
       width: 24px;
     }
   }
+  box-shadow: 0px 20px 40px rgb(57 57 57 / 10%);
 `;
 
 const Toggle = ({ theme, toggleTheme }) => {

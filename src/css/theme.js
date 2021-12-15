@@ -11,7 +11,8 @@ export const lightTheme = {
     header: '#FFF',
     gradient: 'linear-gradient(#2102CA, #9A4ED7)',
     toggle: '#FBFBFB',
-    input: '#161621',
+    input: '#F3F2FF',
+    inputBorder: '#e6e6e6'
 }
   
 export const darkTheme = {
@@ -27,5 +28,6 @@ export const darkTheme = {
     header: '#2A2D40',
     gradient: 'linear-gradient(90deg, #FF2680, #932CE3);',
     toggle: '#9A9A9D',
-    input: '#F3F2FF',
+    input: '#161621',
+    inputBorder: '#101037'
 }
