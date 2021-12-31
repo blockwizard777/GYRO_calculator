@@ -1,4 +1,5 @@
 import React from 'react'
+import { number } from 'prop-types';
 import {
     BrowserRouter as Router,
     useRoutes,
@@ -6,19 +7,27 @@ import {
 
 import Stake from './view/Stake'
 
-const Path = () => {
+const Path = ({gyroBalance}) => {
     let routes = useRoutes ([
-        { path: '/', element: <Stake/> }
+        { path: '/', element: <Stake gyroBalance={gyroBalance}/> }
     ]);
     return routes;
 }
 
-const Routes = () => {
+Path.propTypes = {
+    gyroBalance: number.isRequired
+}
+
+const Routes = ({gyroBalance}) => {
     return (
         <Router>
-            <Path/>
+            <Path gyroBalance={gyroBalance}/>
         </Router>
     );
+}
+
+Routes.propTypes = {
+    gyroBalance: number.isRequired
 }
 
 export default Routes;

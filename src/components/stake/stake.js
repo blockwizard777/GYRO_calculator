@@ -81,6 +81,7 @@ const GetValueButton = styled(Button)`
   border-radius: 6px;
   font-weight: 600;
   font-size: 16px;
+  font-family: "Montserrat";
   line-height: 20px;
   width: 70px;
   margin-right: 24px!important;
@@ -110,6 +111,7 @@ const ApproveButton = styled(Button)`
   color: #EBEBEB;
   font-weight: 600;
   font-size: 16px;
+  font-family: "Montserrat";
   text-transform: none;
   margin-top: 28px!important;
 `

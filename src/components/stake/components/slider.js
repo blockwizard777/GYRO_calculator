@@ -1,5 +1,5 @@
-import * as React from 'react';
-import { func, string, number, element } from 'prop-types';
+import { useState, useEffect } from "react";
+import { func, number } from 'prop-types';
 import styled from 'styled-components';
 import Stack from '@mui/material/Stack';
 import SliderUnstyled from '@mui/base/SliderUnstyled';
@@ -33,7 +33,7 @@ const StyledSlider = styled(SliderUnstyled)`
     display: block;
     position: absolute;
     width: 100%;
-    height: 6px;
+    height: 7px;
     border-radius: 6px;
     background-color: transparent;
     opacity: 0.38;
@@ -43,7 +43,7 @@ const StyledSlider = styled(SliderUnstyled)`
   & .MuiSlider-track {
     display: block;
     position: absolute;
-    height: 6px;
+    height: 7px;
     background: linear-gradient(90deg, #FF2680 4.22%, #932CE3 93.12%);
     border-radius: 10px;
   }
@@ -53,7 +53,7 @@ const StyledSlider = styled(SliderUnstyled)`
     width: 20px;
     height: 20px;
     margin-left: -6px;
-    margin-top: -7px;
+    margin-top: -6.5px;
     box-sizing: border-box;
     border-radius: 50%;
     outline: 0;
@@ -64,7 +64,15 @@ const StyledSlider = styled(SliderUnstyled)`
 `
 
 
-export default function CustomizedSlider() {
+const CustomizedSlider = ({handleValue}) => {
+  
+  const [value, setValue] = useState(30);
+
+  const handleSlider = (e) => {
+    handleValue(e.target.value)
+    setValue(e.target.value)
+  }
+
   return (
     
     <StackSection
@@ -74,9 +82,15 @@ export default function CustomizedSlider() {
       pt={1}
       pb={3}
     >
-      <h3>155 days</h3>
-      <StyledSlider defaultValue={10} />
+      <h3>{value} days</h3>
+      <StyledSlider defaultValue={30} max={365} min={1} step={1} onChange={handleSlider}/>
     </StackSection>
     
   );
 }
+
+CustomizedSlider.propTypes = {
+  handleValue: func.isRequired,
+}
+
+export default CustomizedSlider;

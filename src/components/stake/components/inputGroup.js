@@ -21,6 +21,7 @@ const GetValueButton = styled(Button)`
     border-radius: 6px;
     font-weight: 600;
     font-size: 16px;
+    font-family: "Montserrat";
     line-height: 20px;
     width: 120px;
 `
@@ -36,7 +37,7 @@ const Input = styled.input`
     padding-left: 24px;
     margin-right: 16px;
 `
-const InputGroup = ({button, value, title}) => {
+const InputGroup = ({button, value, title, handleButton, handleInput, name}) => {
     return (
         <>
             <StackSection
@@ -54,8 +55,8 @@ const InputGroup = ({button, value, title}) => {
                     alignItems="center"
                     width="100%"
                 >
-                    <Input value={value} placeholder='Amount'/>
-                    <GetValueButton>{button}</GetValueButton>
+                    <Input type="number" value={value} placeholder='Amount' name={name}  onChange={handleInput}/>
+                    <GetValueButton onClick={handleButton}>{button}</GetValueButton>
                 </Stack>
             </StackSection>
         </>
@@ -66,6 +67,9 @@ InputGroup.propTypes = {
     button: string.isRequired,
     value: number.isRequired,
     title: string.isRequired,
+    handleButton: func.isRequired,
+    handleInput: func.isRequired,
+    name: string.isRequired
 }
 
 export default InputGroup;
